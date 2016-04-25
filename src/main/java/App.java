@@ -20,6 +20,14 @@ public class App {
     get("/get_puzzle", (request, response) -> {
       Map model = new HashMap();
       model.put("template", "templates/puzzle.vtl" );
+
+      DashMaker newDashMaker = new DashMaker();
+      String[] newPuzzle = newDashMaker.replaceVowels();
+      String puzzleDashes = newPuzzle[0];
+      String puzzleAnswer = newPuzzle[1];
+      model.put("fullPuzzle", puzzleDashes);
+      model.put("theAnswer", puzzleAnswer);
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
