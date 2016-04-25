@@ -1,0 +1,50 @@
+import java.util.HashMap;
+
+public class DashMaker {
+  public static void main( String[] args ) {}
+
+    public String replaceVowels(String answer){
+      String puzzle;
+      char[] letterArray = answer.toLowerCase().toCharArray();
+
+
+      HashMap<Character, String> gameMap = new HashMap<Character, String>();
+      gameMap.put('a', '-');
+      gameMap.put('e', '-');
+      gameMap.put('i', '-');
+      gameMap.put('o', '-');
+      gameMap.put('u', '-');
+
+      gameMap.put('l', 'l');
+      gameMap.put('n', 'n');
+      gameMap.put('r', 'r');
+      gameMap.put('s', 's');
+      gameMap.put('t', 't');
+      gameMap.put('d', 'd');
+      gameMap.put('g', 'g');
+      gameMap.put('b', 'b');
+      gameMap.put('c', 'c');
+      gameMap.put('m', 'm');
+      gameMap.put('p', 'p');
+      gameMap.put('f', 'f');
+      gameMap.put('h', 'h');
+      gameMap.put('v', 'v');
+      gameMap.put('w', 'w');
+      gameMap.put('y', 'y');
+      gameMap.put('k', 'k');
+      gameMap.put('j', 'j');
+      gameMap.put('x', 'x');
+      gameMap.put('u', 'u');
+      gameMap.put('z', 'z');
+
+      for ( char letter : letterArray ) {
+
+        valueOfWord += gameMap.get(letter);
+      }
+
+      return valueOfWord;
+    }
+}
+      return "-";
+  }
+}
